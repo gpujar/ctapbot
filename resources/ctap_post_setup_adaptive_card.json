@@ -1,0 +1,143 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "type": "AdaptiveCard",
+        "body": [
+        {
+            "type": "TextBlock",
+            "text": "CTAP Software Installation",
+            "weight": "bolder"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Request CRM to get account in github3",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Get access to adam spvss-appserver-developers group",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Organizer",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Organizer Name",
+            "spacing": "none"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Start Time",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "none",
+            "columns": [
+            {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "05:00 PM",
+                    "isSubtle": false,
+                    "weight": "bolder"
+                }
+                ]
+            },
+            {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "2017",
+                    "isSubtle": true,
+                    "weight": "bolder"
+                }
+                ]
+            }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "End Time",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "none",
+            "columns": [
+            {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "05:30 PM",
+                    "isSubtle": false,
+                    "weight": "bolder"
+                }
+                ]
+            },
+            {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "May 21"
+                }
+                ]
+            },
+            {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "2017",
+                    "isSubtle": true,
+                    "weight": "bolder"
+                }
+                ],
+                 "selectAction": {
+                  "type": "Action.OpenUrl",
+                  "title": "View Monday",
+                  "url": "http://www.microsoft.com"
+                }
+            }
+
+            ]
+        }
+        ],
+        "actions": [
+        {
+        "type": "Action.OpenUrl",
+        "title": "More Info",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+        "type": "Action.OpenUrl",
+        "title": "Call Back",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+        ]
+  }
+}

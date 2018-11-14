@@ -1,0 +1,79 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "type": "AdaptiveCard",
+        "body": [
+        {
+            "type": "TextBlock",
+            "text": "CTAP Software Installation",
+            "weight": "bolder",
+            "size": "large"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Request CRM to get account in github3",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Get access to adam spvss-appserver-developers group",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "https://eman-ssl.cisco.com/OPDATA/ActiveDirectory/adam/index.pcgi?intropath=Entrypoint%7CGo&forest=cisco.com&_OBJECT_GUID=ADAM%3A%3AGroup&_EVENT=view&_EVENT_PARAM%3APK_ID=785023",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Search group and request registration.",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Use this link to go to your group in ADAM:",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "http://eman-core.cisco.com/go/adam_group?forest=cisco.com&name=spvss-appserver-developers",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Generate SSH key",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Run command in Git bash to generate key : ssh-keygen -t rsa -b 4096 -C 'gpujar@jrsm-apl-grt12.cisco.com:29418' ",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "ssh-keygen -t rsa -b 4096 -C 'your_email@example.com' ",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "Add key to github3",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "https://github3.cisco.com/IH/ctap",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        }
+        ],
+        "actions": [
+        ]
+  }
+}

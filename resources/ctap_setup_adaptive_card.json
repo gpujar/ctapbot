@@ -1,0 +1,70 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "type": "AdaptiveCard",
+        "body": [
+        {
+            "type": "TextBlock",
+            "text": "CTAP Source Code Setup",
+            "weight": "bolder",
+            "size": "large"
+        },
+        {
+            "type": "TextBlock",
+            "text": "1. Login to below server & add your ssh keys: \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password  password4Lusers! \n\n File: /home/vcidev/.ssh/authorized_keys \n\n Use ‘vim’, add your keys at the end and save it.",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "2. Change request.js in QML: \n\n var identity = {'cmdcDeviceType':'STB','upId':'4276224767_HH_0','tenantId':'SKYNZ','solutionId':'k','sessionId':'aa40df89-41a6-4a67-9a3a-38af9aa3e1d9','cmdcRegion':'24802','hhId':'4276224767_HH','devId':'4276224767','deviceFeatures':['STB','ABR','DTH','MANAGED','VG-DRM'],'community':'devdth007','tenant':'k','region':'1'}; \n\n http.setRequestHeader('x-cisco-vcs-identity', JSON.stringify(identity));",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "4. Tunnelling \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password  password4Lusers!",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "5.Replace lab-socks.json files in respective CUE & CMA folders",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "cd …/ctap/cue \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node --inspect server.js \n\n cd …/ctap/cma \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node server.js",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "3) Install sqlite3 module in tests,cue and cma folders",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
+            "separator": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "6) Start DCTAP server:",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
+            "separator": true,
+            "isSubtle": true,
+            "size": "small"
+        }
+        ],
+        "actions": [
+        ]
+  }
+}

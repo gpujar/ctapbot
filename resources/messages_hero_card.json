@@ -1,0 +1,220 @@
+{
+  "setup": {
+    "WELCOME": {
+      "steps": {
+        "title": "Welcome To CTAP Bot.",
+        "description": "welcome message",
+        "imageUrl": "https://i.postimg.cc/bNZ91hMr/image-dctap-bot.png",
+        "subtitle": "This bot assist you through development cycle of CTAP. Select below option to assistance.",
+        "size": "medium",
+        "buttons": [
+          {
+            "text": "DCTAP Setup",
+            "postback": "dctap_pre_setup"
+          },
+          {
+            "text": "CTAP Setup",
+            "postback": "ctap_pre_setup"
+          },
+          {
+            "text": "PyTest Setup",
+            "postback": "pytest_pre_setup"
+          }
+        ]
+      }
+    },
+    "DCTAP_SETUP": {
+      "pre_setup": {
+        "steps": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "Select Option To Continue",
+          "buttons": [
+            {
+              "text": "DCTAP Source Setup",
+              "postback": "dctap_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "setup": {
+        "steps": {
+          "description": "DCTAP Source Code Setup And Local Changes",
+          "title": "Select Option To Continue",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "DCTAP Setup Validation",
+              "postback": "dctap_post_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "post_setup": {
+        "steps": {
+          "description": "Starting Of Software ",
+          "title": "Description of the image to display",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "CTAP Setup",
+              "postback": "ctap_pre_setup"
+            },
+            {
+              "text": "PyTest Setup",
+              "postback": "pytest_pre_setup"
+            },
+            {
+              "text": "Close",
+              "postback": "close"
+            }
+          ]
+        }
+      }
+    },
+    "CTAP_SETUP": {
+      "pre_setup": {
+        "steps": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "Select Option To Continue",
+          "buttons": [
+            {
+              "text": "CTAP Source Setup",
+              "postback": "ctap_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "setup": {
+        "steps": {
+          "description": "CTAP Source Code Setup",
+          "title": "Select Option To Continue",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "CTAP Setup Validation",
+              "postback": "ctap_post_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "post_setup": {
+        "steps": {
+          "description": "Starting CTAP Server ",
+          "title": "Description of the image to display",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "DCTAP Setup",
+              "postback": "dctap_pre_setup"
+            },
+            {
+              "text": "PyTest Setup",
+              "postback": "pytest_pre_setup"
+            },
+            {
+              "text": "Close",
+              "postback": "close"
+            }
+          ]
+        }
+      }
+    },
+    "PY_TEST_SETUP": {
+      "pre_setup": {
+        "steps": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "Select Option To Continue",
+          "buttons": [
+            {
+              "text": "PYTEST Source Setup",
+              "postback": "pytest_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "setup": {
+        "steps": {
+          "description": "CTAP Source Code Setup",
+          "title": "Select Option To Continue",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "PYTEST Validation",
+              "postback": "pytest_post_setup"
+            },
+            {
+              "text": "More Info",
+              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
+          ]
+        }
+      },
+      "post_setup": {
+        "steps": {
+          "description": "Starting CTAP Server ",
+          "title": "Description of the image to display",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "DCTAP Setup",
+              "postback": "dctap_pre_setup"
+            },
+            {
+              "text": "CTAP Setup",
+              "postback": "ctap_pre_setup"
+            },
+            {
+              "text": "Close",
+              "postback": "close"
+            }
+          ]
+        }
+      }
+    },
+    "CLOSE": {
+        "steps": {
+          "title": "Thank you.",
+          "description": "close message",
+          "imageUrl": "https://i.ytimg.com/vi/L0AV9KjfHds/maxresdefault.jpg",
+          "subtitle": "Always happy to serve you :-)",
+          "buttons": [
+            ]
+        }
+    },
+    "engines": {
+      "node": "5.10.1"
+    }
+  }
+}
