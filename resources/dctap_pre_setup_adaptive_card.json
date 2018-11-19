@@ -7,7 +7,7 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "DCTAP Software Installation",
+            "text": "DCTAP Pre Setup",
             "weight": "bolder",
             "size": "large"
         },
@@ -19,61 +19,50 @@
         },
         {
             "type": "TextBlock",
-            "text": "Get access to adam spvss-appserver-developers group",
+            "text": "Register to adam spvss-appserver-developers group \n\n Select ADAM Group",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "https://eman-ssl.cisco.com/OPDATA/ActiveDirectory/adam/index.pcgi?intropath=Entrypoint%7CGo&forest=cisco.com&_OBJECT_GUID=ADAM%3A%3AGroup&_EVENT=view&_EVENT_PARAM%3APK_ID=785023",
+            "text": "Generate SSH key \n\n Run command in Git bash to generate key: \n\nssh-keygen -t rsa -b 4096 -C 'your_email@jrsm-apl-grt12.cisco.com:29418' ",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Search group and request registration.",
+            "text": "Add key to github3 by selecting GitHub",
+            "size":"medium",
             "separator": true
         },
         {
             "type": "TextBlock",
-            "text": "Use this link to go to your group in ADAM:",
+            "text": "Install latest recommended NodeJS using \n\n NodeJS Installer option",
+            "size":"medium",
             "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "http://eman-core.cisco.com/go/adam_group?forest=cisco.com&name=spvss-appserver-developers",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Generate SSH key",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Run command in Git bash to generate key : ssh-keygen -t rsa -b 4096 -C 'gpujar@jrsm-apl-grt12.cisco.com:29418' ",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "ssh-keygen -t rsa -b 4096 -C 'your_email@example.com' ",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Add key to github3",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "https://github3.cisco.com/IH/ctap",
-            "separator": true,
-            "isSubtle": true,
-            "size": "small"
         }
         ],
         "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "GitHub",
+              "url": "https://github3.cisco.com/IH/ctap"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "ADAM Group",
+              "url": "https://mailer.cloudapps.cisco.com/itsm/mailer/listDetails.do?list=application_server_users"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "NodeJS Installer",
+              "url": "https://nodejs.org/download/release/"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
+            }
         ]
   }
 }

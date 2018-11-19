@@ -7,87 +7,41 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "DCTAP Source Code Setup",
+            "text": "DCTAP Setup Validation",
             "weight": "bolder",
             "size": "large"
         },
         {
             "type": "TextBlock",
-            "text": "Open Git Bash",
+            "text": "Open Postman, if not installed, \n\n install using POSTMAN option",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "1) Clone Repository:",
+            "text": "Send POST request \n\n Ex: http://localhost:8004/ctap/init \n\n Use port which you used in default.json",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
+            "text": "If you see response, \n\n Congratulation... \n\n DCTAP Setup is done",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "2) Install node modules:",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "3) Install sqlite3 module in tests,cue and cma folders",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "4) Run robohydra",
+            "text": "If there is no response/error, \n\n please recheck all steps using DCTAP Pre Setup option",
             "separator": true,
             "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "cd ../tests \n\n node node_modules/robohydra/bin/robohydra -I ./robohydra-plugin/ -n -P ib_vws_mock -p 4730",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "5) Open below URL in browser",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "http://localhost:4730/robohydra-admin/scenarios \n\n Activate ib_vws_mock plugin",
-            "separator": true,
-            "isSubtle": true,
-            "size": "small"
-        },
-        {
-            "type": "TextBlock",
-            "text": "6) Start DCTAP server:",
-            "separator": true,
-            "isSubtle": true,
-            "size": "small"
-        },
-        {
-            "type": "TextBlock",
-            "text": "cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
-            "separator": true,
-            "isSubtle": true,
-            "size": "small"
         }
         ],
         "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "POSTMAN",
+              "url": "https://www.getpostman.com/apps"
+            }
         ]
   }
 }

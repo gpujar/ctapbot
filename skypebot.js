@@ -42,6 +42,9 @@ const ctapSetupAdaptiveCard = JSON.parse(ctapSetupAdaptiveCard1);
 var ctapPostSetupAdaptiveCard1 = fs.readFileSync('./resources/ctap_post_setup_adaptive_card.json');
 const ctapPostSetupAdaptiveCard = JSON.parse(ctapPostSetupAdaptiveCard1);
 
+var pyTestPreSetupAdaptiveCard1 = fs.readFileSync('./resources/pytest_pre_setup_adaptive_card.json');
+const pyTestPreSetupAdaptiveCard = JSON.parse(pyTestPreSetupAdaptiveCard1);
+
 var pyTestSetupAdaptiveCard1 = fs.readFileSync('./resources/pytest_setup_adaptive_card.json');
 const pyTestSetupAdaptiveCard = JSON.parse(pyTestSetupAdaptiveCard1);
 
@@ -224,7 +227,7 @@ module.exports = class SkypeBot {
             }
                 break;
             case "pytest_pre_setup":{
-                session.send(this.sendAdaptiveCard(session,pyTestSetupAdaptiveCard));
+                session.send(this.sendAdaptiveCard(session,pyTestPreSetupAdaptiveCard));
                 validation_message = this.getHeroCardResponseText(session, messages.setup.PY_TEST_SETUP.pre_setup.steps.title, messages.setup.PY_TEST_SETUP.pre_setup.steps.subtitle, messages.setup.PY_TEST_SETUP.pre_setup.steps.imageUrl, messages.setup.PY_TEST_SETUP.pre_setup.steps.buttons);
                 session.send(validation_message);
             }

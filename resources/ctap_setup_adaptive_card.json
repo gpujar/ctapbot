@@ -13,58 +13,58 @@
         },
         {
             "type": "TextBlock",
-            "text": "1. Login to below server & add your ssh keys: \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password  password4Lusers! \n\n File: /home/vcidev/.ssh/authorized_keys \n\n Use ‘vim’, add your keys at the end and save it.",
+            "text": "Open Git Bash \n\n If not installed, install using below link",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "2. Change request.js in QML: \n\n var identity = {'cmdcDeviceType':'STB','upId':'4276224767_HH_0','tenantId':'SKYNZ','solutionId':'k','sessionId':'aa40df89-41a6-4a67-9a3a-38af9aa3e1d9','cmdcRegion':'24802','hhId':'4276224767_HH','devId':'4276224767','deviceFeatures':['STB','ABR','DTH','MANAGED','VG-DRM'],'community':'devdth007','tenant':'k','region':'1'}; \n\n http.setRequestHeader('x-cisco-vcs-identity', JSON.stringify(identity));",
+            "text": "Clone Repository: \n\n git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "4. Tunnelling \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password  password4Lusers!",
+            "text": "Install node modules: \n\n cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "5.Replace lab-socks.json files in respective CUE & CMA folders",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "cd …/ctap/cue \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node --inspect server.js \n\n cd …/ctap/cma \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node server.js",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "3) Install sqlite3 module in tests,cue and cma folders",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "6) Start DCTAP server:",
+            "text": "Tunnelling \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password: password4Lusers!",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
+            "text": "Replace lab-socks.json files in respective CUE & CMA folders",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Start cue server \n\n cd …/ctap/cue \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node --inspect server.js",
+            "separator": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Start cma server \n\n cd …/ctap/cma \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node server.js",
+            "separator": true,
+            "size": "medium"
         }
         ],
         "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "Git Bash Installer",
+              "url": "https://git-scm.com/downloads"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://wiki.cisco.com/display/SPVSSPE/Setting+Up%2C+Starting%2C+and+Stopping+the+Aggregation+%28Application%29+Servers+in+Detail"
+            }
         ]
   }
 }

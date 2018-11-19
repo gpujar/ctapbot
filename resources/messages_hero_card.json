@@ -5,7 +5,7 @@
         "title": "Welcome To CTAP Bot.",
         "description": "welcome message",
         "imageUrl": "https://i.postimg.cc/bNZ91hMr/image-dctap-bot.png",
-        "subtitle": "This bot assist you through development cycle of CTAP. Select below option to assistance.",
+        "subtitle": "This bot assist you through development cycle of CTAP. Select below option for assistance.",
         "size": "medium",
         "buttons": [
           {
@@ -34,10 +34,6 @@
             {
               "text": "DCTAP Source Setup",
               "postback": "dctap_setup"
-            },
-            {
-              "text": "More Info",
-              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
             }
           ]
         }
@@ -52,10 +48,6 @@
             {
               "text": "DCTAP Setup Validation",
               "postback": "dctap_post_setup"
-            },
-            {
-              "text": "More Info",
-              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
             }
           ]
         }
@@ -68,12 +60,16 @@
           "subtitle": "",
           "buttons": [
             {
-              "text": "CTAP Setup",
-              "postback": "ctap_pre_setup"
+              "text": "DCTAP Pre Setup",
+              "postback": "dctap_pre_setup"
             },
             {
               "text": "PyTest Setup",
               "postback": "pytest_pre_setup"
+            },
+            {
+              "text": "CTAP Setup",
+              "postback": "ctap_pre_setup"
             },
             {
               "text": "Close",
@@ -94,10 +90,6 @@
             {
               "text": "CTAP Source Setup",
               "postback": "ctap_setup"
-            },
-            {
-              "text": "More Info",
-              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
             }
           ]
         }
@@ -112,10 +104,6 @@
             {
               "text": "CTAP Setup Validation",
               "postback": "ctap_post_setup"
-            },
-            {
-              "text": "More Info",
-              "postback": "https://wiki.cisco.com/display/SPVSSPE/First+steps+in+CTAP+Development"
             }
           ]
         }
@@ -127,6 +115,10 @@
           "imageUrl": "",
           "subtitle": "",
           "buttons": [
+            {
+              "text": "CTAP Pre Setup",
+              "postback": "ctap_pre_setup"
+            },
             {
               "text": "DCTAP Setup",
               "postback": "dctap_pre_setup"

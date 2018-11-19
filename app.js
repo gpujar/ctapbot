@@ -35,8 +35,8 @@ const REST_PORT = (process.env.PORT || 5000);
 const botConfig = new SkypeBotConfig(
     "459a5c8bd9fa4a2db2866e723bcf5235",
     "en",
-    "cdb15e9b-e87d-4ad3-b7d7-3f5cc9f0409e",
-    "aeTLVZF802:cnrtqXQ49^#)"
+    "8caae466-e3f1-453d-a882-e773976d7917",
+    "zbdeKUY79347])eqxIABW=#"
 );
 
 const skypeBot = new SkypeBot(botConfig);

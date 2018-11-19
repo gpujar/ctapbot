@@ -7,137 +7,41 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "CTAP Software Installation",
-            "weight": "bolder"
+            "text": "CTAP Setup Validation",
+            "weight": "bolder",
+            "size": "large"
         },
         {
             "type": "TextBlock",
-            "text": "Request CRM to get account in github3",
+            "text": "Open Postman, if not installed, \n\n install using POSTMAN option",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Get access to adam spvss-appserver-developers group",
+            "text": "Send POST request \n\n Ex: http://localhost:8004/ctap/init \n\n Use port which you used in default.json",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Organizer",
+            "text": "If you see response, \n\n Congratulation... \n\n CTAP Setup is done",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Organizer Name",
-            "spacing": "none"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Start Time",
+            "text": "If there is no response/error, \n\n please recheck all steps using CTAP Pre Setup option",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
-        },
-        {
-            "type": "ColumnSet",
-            "spacing": "none",
-            "columns": [
-            {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "05:00 PM",
-                    "isSubtle": false,
-                    "weight": "bolder"
-                }
-                ]
-            },
-            {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "2017",
-                    "isSubtle": true,
-                    "weight": "bolder"
-                }
-                ]
-            }
-            ]
-        },
-        {
-            "type": "TextBlock",
-            "text": "End Time",
-            "separator": true,
-            "isSubtle": true,
-            "size": "small"
-        },
-        {
-            "type": "ColumnSet",
-            "spacing": "none",
-            "columns": [
-            {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "05:30 PM",
-                    "isSubtle": false,
-                    "weight": "bolder"
-                }
-                ]
-            },
-            {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "May 21"
-                }
-                ]
-            },
-            {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "2017",
-                    "isSubtle": true,
-                    "weight": "bolder"
-                }
-                ],
-                 "selectAction": {
-                  "type": "Action.OpenUrl",
-                  "title": "View Monday",
-                  "url": "http://www.microsoft.com"
-                }
-            }
-
-            ]
+            "size": "medium"
         }
         ],
         "actions": [
-        {
-        "type": "Action.OpenUrl",
-        "title": "More Info",
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-        "type": "Action.OpenUrl",
-        "title": "Call Back",
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        }
+            {
+              "type": "Action.OpenUrl",
+              "title": "POSTMAN",
+              "url": "https://www.getpostman.com/apps"
+            }
         ]
   }
 }

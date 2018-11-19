@@ -13,81 +13,69 @@
         },
         {
             "type": "TextBlock",
-            "text": "Open Git Bash",
+            "text": "Open Git Bash \n\n Use below link to install if not installed",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "1) Clone Repository:",
+            "text": "Clone Repository: \n\n git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
+            "text": "Install node modules: \n\n cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "2) Install node modules:",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "3) Install sqlite3 module in tests,cue and cma folders",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "4) Run robohydra",
+            "text": "Install sqlite3 module in tests,cue and cma folders \n\n npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "cd ../tests \n\n node node_modules/robohydra/bin/robohydra -I ./robohydra-plugin/ -n -P ib_vws_mock -p 4730",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "5) Open below URL in browser",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "http://localhost:4730/robohydra-admin/scenarios \n\n Activate ib_vws_mock plugin",
+            "text": "Run Robohydra: \n\n cd ../tests \n\n node node_modules/robohydra/bin/robohydra -I ./robohydra-plugin/ -n -P ib_vws_mock -p 4730 \n\n Open robohydra using Activate Robohydra option \n\n Activate ib_vws_mock plugin",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "6) Start DCTAP server:",
+            "text": "Local Changes In kIB.json: \n\n Set consoleOnly flag to true to enable log \n\n Change DB path of dbBasePath, plannerDBPath, serviceDbBasePath",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
+            "text": "Local Changes In default.json: \n\n Change server port other then 8000 in window machine.",
             "separator": true,
-            "isSubtle": true,
-            "size": "small"
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Start DCTAP server: \n\n cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
+            "separator": true,
+            "size": "medium"
         }
         ],
         "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "Activate Robohydra",
+              "url": "http://localhost:4730/robohydra-admin/scenarios"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "Git Bash Installer",
+              "url": "https://git-scm.com/downloads"
+            },
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://wiki.cisco.com/display/SPVSSPE/Setting+Up%2C+Starting%2C+and+Stopping+the+Aggregation+%28Application%29+Servers+in+Detail"
+            }
         ]
   }
 }
