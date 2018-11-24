@@ -13,33 +13,27 @@
         },
         {
             "type": "TextBlock",
-            "text": "Request CRM to get account in github3",
+            "text": "Request CRM to get account in github3.",
             "separator": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Register to adam spvss-appserver-developers group \n\n Select ADAM Group",
-            "separator": true,
+            "text": "Register to adam group.",
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Generate SSH key \n\n Run command in Git bash to generate key: \n\nssh-keygen -t rsa -b 4096 -C 'your_email@jrsm-apl-grt12.cisco.com:29418' ",
-            "separator": true,
+            "text": "Add SSH key to github3 account.",
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Add key to github3 by selecting GitHub",
-            "size":"medium",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Install latest recommended NodeJS using \n\n NodeJS Installer option",
-            "size":"medium",
-            "separator": true
+            "text": "Install latest recommended NodeJS.",
+            "wrap": true,
+            "size": "medium"
         }
         ],
         "actions": [

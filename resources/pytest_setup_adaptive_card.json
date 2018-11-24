@@ -13,23 +13,12 @@
         },
         {
             "type": "TextBlock",
-            "text": "Install test packages \n\n cd ./tests \n\n npm install ",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Get access to adam spvss-appserver-developers group",
-            "separator": true,
+            "text": "Install test packages in tests \n\n npm install ",
+            "wrap": true,
             "size": "medium"
         }
         ],
         "actions": [
-            {
-              "type": "Action.OpenUrl",
-              "title": "More Info",
-              "url": "https://wiki.cisco.com/display/SPVSSPE/CTAP+PyTest+Setup+and+Debugging+on+Windows"
-            }
         ]
   }
 }

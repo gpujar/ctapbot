@@ -13,50 +13,30 @@
         },
         {
             "type": "TextBlock",
-            "text": "Open Git Bash \n\n Use below link to install if not installed",
+            "text": "Clone Repository and Install modules",
             "separator": true,
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Clone Repository: \n\n git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
+            "text": "Run Robohydra and activate plugin",
             "separator": true,
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Install node modules: \n\n cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
+            "text": "Do local Changes In kIB.json",
             "separator": true,
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Install sqlite3 module in tests,cue and cma folders \n\n npm sqlite3 \n\n cd ../cma \n\n npm sqlite3 \n\n cd ../cue \n\n npm sqlite3",
+            "text": "Start DCTAP server",
             "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Run Robohydra: \n\n cd ../tests \n\n node node_modules/robohydra/bin/robohydra -I ./robohydra-plugin/ -n -P ib_vws_mock -p 4730 \n\n Open robohydra using Activate Robohydra option \n\n Activate ib_vws_mock plugin",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Local Changes In kIB.json: \n\n Set consoleOnly flag to true to enable log \n\n Change DB path of dbBasePath, plannerDBPath, serviceDbBasePath",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Local Changes In default.json: \n\n Change server port other then 8000 in window machine.",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Start DCTAP server: \n\n cd ../cue \n\n NODE_ENV=kIB NODE_CONFIG_DIR=./etc node --inspect server.js",
-            "separator": true,
+            "wrap": true,
             "size": "medium"
         }
         ],

@@ -13,26 +13,14 @@
         },
         {
             "type": "TextBlock",
-            "text": "Open Postman, if not installed, \n\n install using POSTMAN option",
-            "separator": true,
+            "text": "Send Postman POST request \n\n Ex: http://localhost:8004/ctap/init",
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Send POST request \n\n Ex: http://localhost:8004/ctap/init \n\n Use port which you used in default.json",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "If you see response, \n\n Congratulation... \n\n DCTAP Setup is done",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "If there is no response/error, \n\n please recheck all steps using DCTAP Pre Setup option",
-            "separator": true,
+            "text": "No response/error, recheck Pre Setup",
+            "wrap": true,
             "size": "medium"
         }
         ],

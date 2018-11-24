@@ -13,44 +13,23 @@
         },
         {
             "type": "TextBlock",
-            "text": "Open Git Bash \n\n If not installed, install using below link",
+            "text": "Clone Repository and Install modules",
             "separator": true,
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Clone Repository: \n\n git clone git@github3.cisco.com:<cec_id>/ctap.git \n\n Ex: git clone git@github3.cisco.com:<cec_id>/ctap.git",
+            "text": "Do Tunnelling and add lab-socks.json",
             "separator": true,
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Install node modules: \n\n cd ctap \n\n ./utils/appserver setup \n\n ./utils/appserver start \n\n cd /tests \n\n npm install",
+            "text": "Start cue and cma server \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node --inspect server.js",
             "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Tunnelling \n\n ssh -D 33333 vcidev@jump.aws-vpc-bglnammamane.phx.cisco.com \n\n Password: password4Lusers!",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Replace lab-socks.json files in respective CUE & CMA folders",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Start cue server \n\n cd …/ctap/cue \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node --inspect server.js",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Start cma server \n\n cd …/ctap/cma \n\n NODE_ENV=lab-socks NODE_CONFIG_DIR=./etc/ node server.js",
-            "separator": true,
+            "wrap": true,
             "size": "medium"
         }
         ],

@@ -4,8 +4,8 @@
       "steps": {
         "title": "Welcome To CTAP Bot.",
         "description": "welcome message",
-        "imageUrl": "https://i.postimg.cc/bNZ91hMr/image-dctap-bot.png",
-        "subtitle": "This bot assist you through development cycle of CTAP. Select below option for assistance.",
+        "imageUrl": "https://i.postimg.cc/GmCJ87tP/home-16-9.png",
+        "subtitle": "This bot assist you through development cycle of CTAP. \n\n Select below option for assistance.",
         "size": "medium",
         "buttons": [
           {
@@ -29,7 +29,7 @@
           "description": "",
           "subtitle": "",
           "imageUrl": "",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "buttons": [
             {
               "text": "DCTAP Source Setup",
@@ -41,7 +41,7 @@
       "setup": {
         "steps": {
           "description": "DCTAP Source Code Setup And Local Changes",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "imageUrl": "",
           "subtitle": "",
           "buttons": [
@@ -85,7 +85,7 @@
           "description": "",
           "subtitle": "",
           "imageUrl": "",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "buttons": [
             {
               "text": "CTAP Source Setup",
@@ -97,7 +97,7 @@
       "setup": {
         "steps": {
           "description": "CTAP Source Code Setup",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "imageUrl": "",
           "subtitle": "",
           "buttons": [
@@ -141,7 +141,7 @@
           "description": "",
           "subtitle": "",
           "imageUrl": "",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "buttons": [
             {
               "text": "PYTEST Source Setup",
@@ -157,7 +157,7 @@
       "setup": {
         "steps": {
           "description": "CTAP Source Code Setup",
-          "title": "Select Option To Continue",
+          "title": "Select To Continue",
           "imageUrl": "",
           "subtitle": "",
           "buttons": [
@@ -199,7 +199,7 @@
         "steps": {
           "title": "Thank you.",
           "description": "close message",
-          "imageUrl": "https://i.ytimg.com/vi/L0AV9KjfHds/maxresdefault.jpg",
+          "imageUrl": "https://i.postimg.cc/GmCJ87tP/home-16-9.png",
           "subtitle": "Always happy to serve you :-)",
           "buttons": [
             ]

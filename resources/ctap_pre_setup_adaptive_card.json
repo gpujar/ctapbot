@@ -19,25 +19,14 @@
         },
         {
             "type": "TextBlock",
-            "text": "Register to adam spvss-appserver-developers group \n\n Select ADAM Group",
-            "separator": true,
+            "text": "Register to adam group and update SSH key in github3",
+            "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Generate SSH key \n\n Run command in Git bash to generate key: \n\nssh-keygen -t rsa -b 4096 -C 'your_email@jrsm-apl-grt12.cisco.com:29418' ",
-            "separator": true,
-            "size": "medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Add key to github3 by selecting GitHub",
-            "size":"medium",
-            "separator": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Install latest recommended NodeJS using NodeJS Installer option",
+            "text": "Install latest recommended NodeJS",
+            "wrap": true,
             "size":"medium",
             "separator": true
         }

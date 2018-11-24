@@ -182,7 +182,7 @@ module.exports = class SkypeBot {
              //   session.send(steps_message);
                 validation_message = this.getHeroCardResponseText(session, messages.setup.WELCOME.steps.title, messages.setup.WELCOME.steps.subtitle, messages.setup.WELCOME.steps.imageUrl, messages.setup.WELCOME.steps.buttons);
                 session.send(validation_message);
-             //   session.send(this.sendAdaptiveCard(session,welcomeAdaptiveCard));
+               // session.send(this.sendAdaptiveCard(session,welcomeAdaptiveCard));
             }
                 break;
             case "dctap_pre_setup":{
@@ -233,7 +233,7 @@ module.exports = class SkypeBot {
             }
                 break;
             case "pytest_setup":{
-                session.send(this.sendAdaptiveCard(session,pyTestPostSetupAdaptiveCard));
+                session.send(this.sendAdaptiveCard(session,pyTestSetupAdaptiveCard));
                 validation_message = this.getHeroCardResponseText(session, messages.setup.PY_TEST_SETUP.setup.steps.title, messages.setup.PY_TEST_SETUP.setup.steps.subtitle, messages.setup.PY_TEST_SETUP.setup.steps.imageUrl, messages.setup.PY_TEST_SETUP.setup.steps.buttons);
                 session.send(validation_message);
             }
