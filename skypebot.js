@@ -51,6 +51,9 @@ const pyTestSetupAdaptiveCard = JSON.parse(pyTestSetupAdaptiveCard1);
 var pyTestPostSetupAdaptiveCard1 = fs.readFileSync('./resources/pytest_post_setup_adaptive_card.json');
 const pyTestPostSetupAdaptiveCard = JSON.parse(pyTestPostSetupAdaptiveCard1);
 
+var codeCheckinAdaptiveCard1 = fs.readFileSync('./resources/code_checkin_adaptive_card.json');
+const codeCheckinAdaptiveCard = JSON.parse(codeCheckinAdaptiveCard1);
+
 var messagesHeroCard1 = fs.readFileSync('./resources/messages_hero_card.json');
 var messages = JSON.parse(messagesHeroCard1);
 
@@ -241,6 +244,12 @@ module.exports = class SkypeBot {
             case "pytest_post_setup":{
                 session.send(this.sendAdaptiveCard(session,pyTestPostSetupAdaptiveCard));
                 validation_message = this.getHeroCardResponseText(session, messages.setup.PY_TEST_SETUP.post_setup.steps.title, messages.setup.PY_TEST_SETUP.post_setup.steps.subtitle, messages.setup.PY_TEST_SETUP.post_setup.steps.imageUrl, messages.setup.PY_TEST_SETUP.post_setup.steps.buttons);
+                session.send(validation_message);
+            }
+                break;
+            case "code_checkin":{
+                session.send(this.sendAdaptiveCard(session,codeCheckinAdaptiveCard));
+                validation_message = this.getHeroCardResponseText(session, messages.setup.CODE_CHECKIN.steps.title, messages.setup.CODE_CHECKIN.steps.subtitle, messages.setup.CODE_CHECKIN.steps.imageUrl, messages.setup.CODE_CHECKIN.steps.buttons);
                 session.send(validation_message);
             }
                 break;

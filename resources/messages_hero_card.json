@@ -4,7 +4,7 @@
       "steps": {
         "title": "Welcome To CTAP Bot.",
         "description": "welcome message",
-        "imageUrl": "https://i.postimg.cc/GmCJ87tP/home-16-9.png",
+        "imageUrl": "https://i.postimg.cc/8zTzpyTr/image-ctap.png",
         "subtitle": "This bot assist you through development cycle of CTAP. \n\n Select below option for assistance.",
         "size": "medium",
         "buttons": [
@@ -19,6 +19,10 @@
           {
             "text": "PyTest Setup",
             "postback": "pytest_pre_setup"
+          },
+          {
+            "text": "Code Submit",
+            "postback": "code_checkin"
           }
         ]
       }
@@ -70,6 +74,10 @@
             {
               "text": "CTAP Setup",
               "postback": "ctap_pre_setup"
+            },
+            {
+              "text": "Code Submit",
+              "postback": "code_checkin"
             },
             {
               "text": "Close",
@@ -126,6 +134,10 @@
             {
               "text": "PyTest Setup",
               "postback": "pytest_pre_setup"
+            },
+            {
+              "text": "Code Submit",
+              "postback": "code_checkin"
             },
             {
               "text": "Close",
@@ -188,6 +200,10 @@
               "postback": "ctap_pre_setup"
             },
             {
+              "text": "Code Submit",
+              "postback": "code_checkin"
+            },
+            {
               "text": "Close",
               "postback": "close"
             }
@@ -199,10 +215,24 @@
         "steps": {
           "title": "Thank you.",
           "description": "close message",
-          "imageUrl": "https://i.postimg.cc/GmCJ87tP/home-16-9.png",
+          "imageUrl": "https://i.postimg.cc/8zTzpyTr/image-ctap.png",
           "subtitle": "Always happy to serve you :-)",
           "buttons": [
             ]
+        }
+    },
+    "CODE_CHECKIN": {
+        "steps": {
+          "title": "Code Submit",
+          "description": "close message",
+          "imageUrl": "",
+          "subtitle": "",
+          "buttons": [
+            {
+              "text": "Close",
+              "postback": "close"
+            }
+          ]
         }
     },
     "engines": {
