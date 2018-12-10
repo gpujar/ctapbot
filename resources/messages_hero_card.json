@@ -4,7 +4,7 @@
       "steps": {
         "title": "Welcome To CTAP Bot.",
         "description": "welcome message",
-        "imageUrl": "https://i.postimg.cc/8zTzpyTr/image-ctap.png",
+        "imageUrl": "https://i.postimg.cc/5Nq5PNpd/ctap-guru-final.png",
         "subtitle": "This bot assist you through development cycle of CTAP. \n\n Select below option for assistance.",
         "size": "medium",
         "buttons": [
@@ -215,7 +215,7 @@
         "steps": {
           "title": "Thank you.",
           "description": "close message",
-          "imageUrl": "https://i.postimg.cc/8zTzpyTr/image-ctap.png",
+          "imageUrl": "https://i.postimg.cc/5Nq5PNpd/ctap-guru-final.png",
           "subtitle": "Always happy to serve you :-)",
           "buttons": [
             ]
