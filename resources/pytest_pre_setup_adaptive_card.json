@@ -13,14 +13,14 @@
         },
         {
             "type": "TextBlock",
-            "text": "Install python 2.7.5/2.7.6 and virtual environment",
+            "text": "Install python 2.7.5/2.7.6 version and virtual environment",
             "separator": true,
             "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Set up Virtual enviroment and activate",
+            "text": "Set up Virtual enviroment and activate same",
             "separator": true,
             "wrap": true,
             "size": "medium"

@@ -13,12 +13,17 @@
         },
         {
             "type": "TextBlock",
-            "text": "Install test packages in tests \n\n npm install ",
+            "text": "Install node packages in tests directory \n\n npm install ",
             "wrap": true,
             "size": "medium"
         }
         ],
         "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://wiki.cisco.com/display/SPVSSPE/CTAP+PyTest+Setup+and+Debugging+on+Windows"
+            }
         ]
   }
 }

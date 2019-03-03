@@ -7,25 +7,31 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "Code Checkin",
+            "text": "Code Submit To Github.",
             "weight": "bolder",
             "size": "large"
         },
         {
             "type": "TextBlock",
-            "text": "Create new branch and checkout",
+            "text": "Create new branch and checkout branch",
             "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
-            "text": "Add and commit changes",
+            "text": "Add and commit code changes",
             "wrap": true,
             "size": "medium"
         },
         {
             "type": "TextBlock",
             "text": "Push changes to fork",
+            "wrap": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Compare and merge changes with master",
             "wrap": true,
             "size": "medium"
         }

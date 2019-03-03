@@ -256,6 +256,7 @@ module.exports = class SkypeBot {
             case "close":{
                 validation_message = this.getHeroCardResponseText(session, messages.setup.CLOSE.steps.title, messages.setup.CLOSE.steps.subtitle, messages.setup.CLOSE.steps.imageUrl, messages.setup.CLOSE.steps.buttons);
                 session.send(validation_message);
+               // session.endConversationAction();
                 //session.send(this.sendAdaptiveCard(session,pyTestPostSetupAdaptiveCard));
             }
                 break;
@@ -304,7 +305,8 @@ module.exports = class SkypeBot {
                     if (postback.startsWith("http")) {
                         button = botbuilder.CardAction.openUrl(session, postback, messageButton.text);
                     } else {
-                        button = botbuilder.CardAction.postBack(session, postback, messageButton.text);
+                        //button = botbuilder.CardAction.postBack(session, postback, messageButton.text); Skype Code
+                        button = botbuilder.CardAction.messageBack(session).title(messageButton.text).displayText(messageButton.text).value("Value").text(postback);
                     }
                     buttons_.push(button);
                 }

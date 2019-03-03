@@ -13,11 +13,32 @@
         },
         {
             "type": "TextBlock",
+            "text": "Validate Python Installation using python command",
+            "separator": true,
+            "wrap": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Run pytest using below command",
+            "separator": true,
+            "wrap": true,
+            "size": "medium"
+        },
+        {
+            "type": "TextBlock",
             "text": "py.test -k 'not HE' component_pytest/v1_5_1/test_KGuide_v3.py::Test_guide_channel_schedule_get_atv::test_guide_catchup_events_and_prefetch -sv --build_tlc=False",
             "separator": true,
             "wrap": true,
             "size": "medium"
         }
+        ],
+        "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://wiki.cisco.com/display/SPVSSPE/CTAP+PyTest+Setup+and+Debugging+on+Windows"
+            }
         ]
   }
 }
