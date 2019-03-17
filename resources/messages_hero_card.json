@@ -40,6 +40,42 @@
               "postback": "dctap_setup"
             }
           ]
+        },
+        "ctap_link": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "DCTAP Source Code Repository",
+          "buttons": [
+            {
+              "text": "Github Repo",
+              "postback": "https://github3.cisco.com/IH/ctap"
+            }
+          ]
+        },
+        "adam_link": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "Subscribe to ADAM group from link",
+          "buttons": [
+            {
+              "text": "ADAM Subscription Link",
+              "postback": "https://mailer.cloudapps.cisco.com/itsm/mailer/listDetails.do?list=application_server_users"
+            }
+          ]
+        },
+        "nodejs_link": {
+          "description": "",
+          "subtitle": "",
+          "imageUrl": "",
+          "title": "Install NodeJS from link",
+          "buttons": [
+            {
+              "text": "NodeJS Installer.",
+              "postback": "https://nodejs.org/download/release/"
+            }
+          ]
         }
       },
       "setup": {

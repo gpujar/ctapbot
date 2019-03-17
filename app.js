@@ -50,9 +50,9 @@ app.use(bodyParser.json());
 // app.post('/chat', skypeBot.botService.listen());
 app.post('/chat', skypeBot.botService.listen());
 app.get('/chat', function(){
-     console.log('Get is called now...........');
+     console.log('CTAP Guru Get is called now...........');
 });
 app.listen(REST_PORT, function () {
-    console.log('Rest service ready on port ' + REST_PORT);
+    console.log('CTAP Guru Rest service ready on port ' + REST_PORT);
     return;
 });

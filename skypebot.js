@@ -120,7 +120,7 @@ module.exports = class SkypeBot {
     }
 
     processMessage(session) {
-        console.log('Giri :: Response from dialog flow ::', session);
+       // console.log('CTAP Guru :: Response from dialog flow ::', session);
         let messageText = session.message.text;
         let sender = session.message.address.conversation.id;
         if (messageText && sender) {
@@ -136,22 +136,25 @@ module.exports = class SkypeBot {
                         source: "skype"
                     }
                 });
-
             apiaiRequest.on('response', (response) => {
-                console.log(sender, "Received api.ai response");
+                console.log('CTAP Guru :: Api.ai response  ', JSON.stringify(response));
                 if (this._botConfig.devConfig) {
                     console.log(sender, "Received api.ai response");
                 }
-
                 if (SkypeBot.isDefined(response.result) && SkypeBot.isDefined(response.result.fulfillment)) {
                     let responseText = response.result.fulfillment.speech;
                     let responseMessages = response.result.fulfillment.messages;
-                    console.log('Giri :: responseText '+responseText);
-                    console.log('Giri :: responseMessages '+JSON.stringify(responseMessages));
+                    let intentAction = response.result.action;
+                    let intentParameters = response.result.parameters;
+
+                    console.log('CTAP Guru :: intentAction '+intentAction);
+                    console.log('CTAP Guru :: intentParameters '+JSON.stringify(intentParameters));
+                    console.log('CTAP Guru :: responseText '+responseText);
+                    console.log('CTAP Guru :: responseMessages '+JSON.stringify(responseMessages));
 
                     if (SkypeBot.isDefined(responseMessages) && responseMessages.length > 0) {
                        // this.doRichContentResponse(session, responseMessages);
-                        this.getMessage(session, responseMessages, responseText);
+                        this.getMessage(session, responseMessages, intentAction, intentParameters);
                         //session.send("testing....");
                     } else if (SkypeBot.isDefined(responseText)) {
                         console.log(sender, 'Response as text message');
@@ -164,22 +167,19 @@ module.exports = class SkypeBot {
                     console.log(sender, 'Received empty result');
                 }
             });
-
             apiaiRequest.on('error', (error) => {
                 console.error(sender, 'Error while call to api.ai', error);
             });
-
             apiaiRequest.end();
         } else {
             console.log('Empty message');
         }
     }
 
-    getMessage(session, message, responseText) {
+    getMessage(session, message, intentAction, intentParameters) {
         let steps_message;
         let validation_message;
-        console.log('Giri :: responseText  '+responseText);
-        switch (responseText) {
+        switch (intentAction) {
             case "welcome":{
               //  steps_message = new botbuilder.Message(session).text(messages.setup.DCTAP_SETUP.pre_setup.steps.subtitle).textFormat('plain');
              //   session.send(steps_message);
@@ -191,17 +191,22 @@ module.exports = class SkypeBot {
             case "dctap_pre_setup":{
               //  steps_message = new botbuilder.Message(session).text(messages.setup.DCTAP_SETUP.pre_setup.steps.subtitle).textFormat('plain');
              //   session.send(steps_message);
-                session.send(this.sendAdaptiveCard(session,dctapPreSetupAdaptiveCard));
-                validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.pre_setup.steps.title, messages.setup.DCTAP_SETUP.pre_setup.steps.subtitle, messages.setup.DCTAP_SETUP.pre_setup.steps.imageUrl, messages.setup.DCTAP_SETUP.pre_setup.steps.buttons);
+                if(intentParameters.ctap_link !== "" && intentParameters.ctap_link === "ctap link"){
+                    validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.pre_setup.ctap_link.title, messages.setup.DCTAP_SETUP.pre_setup.ctap_link.subtitle, messages.setup.DCTAP_SETUP.pre_setup.ctap_link.imageUrl, messages.setup.DCTAP_SETUP.pre_setup.ctap_link.buttons);
+                }else if(intentParameters.adam_link !== "" && intentParameters.adam_link === "adam link"){
+                    validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.pre_setup.adam_link.title, messages.setup.DCTAP_SETUP.pre_setup.adam_link.subtitle, messages.setup.DCTAP_SETUP.pre_setup.adam_link.imageUrl, messages.setup.DCTAP_SETUP.pre_setup.adam_link.buttons);
+                }else if(intentParameters.nodejs_link !== "" && intentParameters.nodejs_link === "nodejs link"){
+                    validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.pre_setup.nodejs_link.title, messages.setup.DCTAP_SETUP.pre_setup.nodejs_link.subtitle, messages.setup.DCTAP_SETUP.pre_setup.nodejs_link.imageUrl, messages.setup.DCTAP_SETUP.pre_setup.nodejs_link.buttons);
+                }else{
+                    session.send(this.sendAdaptiveCard(session,dctapPreSetupAdaptiveCard));
+                    validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.pre_setup.steps.title, messages.setup.DCTAP_SETUP.pre_setup.steps.subtitle, messages.setup.DCTAP_SETUP.pre_setup.steps.imageUrl, messages.setup.DCTAP_SETUP.pre_setup.steps.buttons);
+                }
                 session.send(validation_message);
             }
                 break;
             case "dctap_setup":{
-                console.log('Giri :: DCTAP SETUP....  ');
-                console.log('Giri :: dctapSetupAdaptiveCard  '+dctapSetupAdaptiveCard);
                 session.send(this.sendAdaptiveCard(session,dctapSetupAdaptiveCard));
                 validation_message = this.getHeroCardResponseText(session, messages.setup.DCTAP_SETUP.setup.steps.title, messages.setup.DCTAP_SETUP.setup.steps.subtitle, messages.setup.DCTAP_SETUP.setup.steps.imageUrl, messages.setup.DCTAP_SETUP.setup.steps.buttons);
-                console.log('Giri :: validation_message  '+validation_message);
                 session.send(validation_message);
             }
                 break;
@@ -282,13 +287,13 @@ module.exports = class SkypeBot {
     }
 
     getHeroCardResponseText(session, title, subtitle, imageUrl, buttons) {
-        console.log('giri 1 :: ' + title);
+        console.log('CTAP Guru getHeroCardResponseText title :: ' + title);
         let heroCard = new botbuilder.HeroCard(session).title(title);
-        console.log('giri 2 :: ' + subtitle);
+        console.log('CTAP Guru getHeroCardResponseText subtitle :: ' + subtitle);
         if (SkypeBot.isDefined(subtitle)) {
             heroCard = heroCard.subtitle(subtitle)
         }
-        console.log('giri 3 :: ' + imageUrl);
+        console.log('CTAP Guru :: getHeroCardResponseText imageUrl ' + imageUrl);
         if (SkypeBot.isDefined(imageUrl)) {
             heroCard = heroCard.images([botbuilder.CardImage.create(session, imageUrl)]);
         }
